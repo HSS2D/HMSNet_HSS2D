@@ -1,0 +1,61 @@
+CUDNN:
+  BENCHMARK: true
+  DETERMINISTIC: false
+  ENABLED: true
+
+GPUS: [0]
+OUTPUT_DIR: 'output'
+LOG_DIR: 'log'
+WORKERS: 6
+PRINT_FREQ: 10
+
+DATASET:
+  DATASET: ade20k
+  ROOT: data/
+  TEST_SET: 'list/ade20k/val.lst'
+  TRAIN_SET: 'list/ade20k/train.lst'
+  NUM_CLASSES: 150
+
+MODEL:
+  NAME: hmsnet
+  NUM_OUTPUTS: 2
+  PRETRAINED: ""
+
+LOSS:
+  USE_OHEM: true
+  OHEMTHRES: 0.7
+  OHEMKEEP: 131072
+  BALANCE_WEIGHTS: [0.4, 1.0]
+  SB_WEIGHTS: 1.0
+
+TRAIN:
+  IMAGE_SIZE:
+  - 512  # Using a more typical resolution for ADE20K training
+  - 512
+  BASE_SIZE: 512  # Matching base size with training image size
+  BATCH_SIZE_PER_GPU: 16
+  SHUFFLE: true
+  BEGIN_EPOCH: 0
+  END_EPOCH: 121
+  RESUME: false
+  OPTIMIZER: sgd
+  LR: 0.005
+  WD: 0.0005
+  MOMENTUM: 0.9
+  NESTEROV: false
+  FLIP: true
+  MULTI_SCALE: true
+  IGNORE_LABEL: 255
+  SCALE_FACTOR: 16
+
+TEST:
+  IMAGE_SIZE:
+  - 512  # Test image size
+  - 512
+  BASE_SIZE: 512
+  BATCH_SIZE_PER_GPU: 1
+  FLIP_TEST: false
+  MULTI_SCALE: false
+  MODEL_FILE: ''  # Provide path to your trained model if available
+  OUTPUT_INDEX: 0
+  OTHER_SCALE: false
