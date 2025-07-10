@@ -1,1 +1,90 @@
-[README.md](https://github.com/user-attachments/files/21162987/README.md)
+
+
+#### Introduction:
+
+Core code examples of HMSNet, including the **HSS2D** module based on **Mamba and HilbertScan**, the ZVM module combining Mamba and **Z-Order**, and the core code of the **VSS module**.
+
+For more information on Mamba, please visit: https://github.com/state-spaces/mamba.git
+
+More on Vision Mamba: https://github.com/MzeroMiko/VMamba.git
+
+
+
+#### Related Python Dependencies：
+
+Below are the exact environment dependency versions for our module's full operation, provided for your reference. 
+
+You can copy them into a `requirements.txt` .
+
+```xml
+imageio==2.9.0
+imageio-ffmpeg==0.4.2
+markdown-it-py==3.0.0
+matplotlib==3.7.5
+mmengine==0.10.5
+more-itertools==10.3.0
+multidict==6.1.0
+nvidia-cuda-runtime-cu11==11.8.89
+opencv-python==4.10.0.84
+packaging==24.1
+pandas==2.0.3
+pkgutil_resolve_name==1.3.10
+platformdirs==4.2.2
+pluggy==1.5.0
+portalocker==2.10.1
+prettytable==3.11.0
+protobuf==5.28.2
+pudb==2019.2
+py==1.11.0
+pyarrow==17.0.0
+pyasn1==0.6.1
+pyasn1_modules==0.4.1
+pycodestyle==2.12.1
+pycuda==2024.1.2
+pydeck==0.9.1
+pyDeprecate==0.3.1
+pyflakes==3.2.0
+Pygments==2.18.0
+pyparsing==3.1.4
+pyquaternion==0.9.9
+pytest==8.3.3
+pytools==2024.1.14
+pytorch-lightning==1.4.2
+pytz==2024.2
+sacremoses==0.1.1
+safetensors==0.4.5
+scikit-learn==1.3.2
+scipy==1.10.1
+seaborn==0.13.2
+six==1.16.0
+tabulate==0.9.0
+taming-transformers==0.0.1
+tenacity==9.0.0
+tensorboard==2.14.0
+tensorboard-data-server==0.7.2
+tensorboardX==2.6.2.2
+tensorrt-cu11-bindings==10.7.0
+tensorrt-cu11-libs==10.7.0
+tensorrt_cu11==10.7.0
+termcolor==2.4.0
+test_tube==0.7.5
+thop==0.1.1.post2209072238
+threadpoolctl==3.5.0
+timm==0.4.12
+torch==2.4.1
+torch-fidelity==0.3.0
+torchaudio==2.4.1
+torchcam==0.4.0
+torchmetrics==0.6.0
+torchsummary==1.5.1
+torchvision==0.19.1
+tornado==6.4.1
+tqdm==4.66.5
+transformers==4.45.1
+```
+
+#### HMSNet Architecture：
+
+<img src="C:\Users\19115\Downloads\f4.jpg" alt="f4" style="zoom: 33%;" />
+
+
