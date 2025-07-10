@@ -84,7 +84,9 @@ transformers==4.45.1
 ```
 
 #### HMSNet Architecture：
-
-<img src="C:\Users\19115\Downloads\f4.jpg" alt="f4" style="zoom: 33%;" />
-
-
+![f4](https://github.com/user-attachments/assets/5903b8e1-e524-4225-a6d1-fcf147401138)
+<br>
+<br>
+<br>
+#### HSS2D Architecture：
+![f7](https://github.com/user-attachments/assets/4c633e31-bdbe-41d2-b7f4-496db399895d)
