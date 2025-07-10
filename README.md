@@ -4,6 +4,12 @@
 
 Core code examples of HMSNet, including the **HSS2D** module based on **Mamba and HilbertScan**, the ZVM module combining Mamba and **Z-Order**, and the core code of the **VSS module**.
 
+You can directly refer to and integrate our module code into your own models for training. 
+
+Additionally, we provide complete loss function code, including **detail-optimized Dice loss** and **cross-entropy loss combined with Ohem online hard example mining**. 
+
+We've also prepared **detailed dataset processing example code** to help you work efficiently.
+
 For more information on Mamba, please visit: https://github.com/state-spaces/mamba.git
 
 More on Vision Mamba: https://github.com/MzeroMiko/VMamba.git
