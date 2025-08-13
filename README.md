@@ -17,85 +17,60 @@ More on Vision Mamba: https://github.com/MzeroMiko/VMamba.git
 
 
 
+
 #### Related Python Dependencies：
 
 Below are the exact environment dependency versions for our module's full operation, provided for your reference. 
-
-You can copy them into a `requirements.txt` .
-
-```xml
-imageio==2.9.0
-imageio-ffmpeg==0.4.2
-markdown-it-py==3.0.0
-matplotlib==3.7.5
-mmengine==0.10.5
-more-itertools==10.3.0
-multidict==6.1.0
-nvidia-cuda-runtime-cu11==11.8.89
-opencv-python==4.10.0.84
-packaging==24.1
-pandas==2.0.3
-pkgutil_resolve_name==1.3.10
-platformdirs==4.2.2
-pluggy==1.5.0
-portalocker==2.10.1
-prettytable==3.11.0
-protobuf==5.28.2
-pudb==2019.2
-py==1.11.0
-pyarrow==17.0.0
-pyasn1==0.6.1
-pyasn1_modules==0.4.1
-pycodestyle==2.12.1
-pycuda==2024.1.2
-pydeck==0.9.1
-pyDeprecate==0.3.1
-pyflakes==3.2.0
-Pygments==2.18.0
-pyparsing==3.1.4
-pyquaternion==0.9.9
-pytest==8.3.3
-pytools==2024.1.14
-pytorch-lightning==1.4.2
-pytz==2024.2
-sacremoses==0.1.1
-safetensors==0.4.5
-scikit-learn==1.3.2
-scipy==1.10.1
-seaborn==0.13.2
-six==1.16.0
-tabulate==0.9.0
-taming-transformers==0.0.1
-tenacity==9.0.0
-tensorboard==2.14.0
-tensorboard-data-server==0.7.2
-tensorboardX==2.6.2.2
-tensorrt-cu11-bindings==10.7.0
-tensorrt-cu11-libs==10.7.0
-tensorrt_cu11==10.7.0
-termcolor==2.4.0
-test_tube==0.7.5
-thop==0.1.1.post2209072238
-threadpoolctl==3.5.0
-timm==0.4.12
-torch==2.4.1
-torch-fidelity==0.3.0
-torchaudio==2.4.1
-torchcam==0.4.0
-torchmetrics==0.6.0
-torchsummary==1.5.1
-torchvision==0.19.1
-tornado==6.4.1
-tqdm==4.66.5
-transformers==4.45.1
-```
-
 Install dependencies
 
 We provide an exact requirements.txt for reproducibility:
 ```
 pip install -r requirements.txt
 ```
+
+Next, install the required dependencies for Mamba.
+```
+pip install causal_conv1d==1.1.1
+pip install mamba-ssm==1.2.0.post1
+git clone https://github.com/hustvl/Vim.git
+# copy mamba-ssm dir in vim to conda env site-package dir
+cp -rf mamba-1p1p1/mamba_ssm /opt/miniconda3/envs/mamba/lib/python3.10/site-packages
+```
+
+Verify whether the environment has been installed successfully. If no error is reported, the installation is successful.
+```
+import torch
+from mamba_ssm import Mamba
+
+batch, length, dim = 2, 64, 16
+x = torch.randn(batch, length, dim).to("cuda")
+model = Mamba(
+    # This module uses roughly 3 * expand * d_model^2 parameters
+    d_model=dim, # Model dimension d_model
+    d_state=32,  # SSM state expansion factor
+    d_conv=5,    # Local convolution width
+    expand=3,    # Block expansion factor
+).to("cuda")
+y = model(x)
+assert y.shape == x.shape
+```
+
+
+Next, test whether HSS2D is available.
+```
+import torch
+import torch.nn as nn
+from hvm import HSS2D
+
+if __name__ == '__main__':
+    hss2d = HSS2D(d_model=12).cuda()
+    x = torch.randn(1, 12, 640, 640) # batch_size, channels, height, width
+    x = x.cuda()
+    y = ss2d(x)
+    print(y.shape)
+```
+
+
 
 Pretrained Weights
 
