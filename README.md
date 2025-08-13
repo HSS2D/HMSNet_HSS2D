@@ -101,9 +101,8 @@ Pretrained Weights
 
 We provide pretrained HVMBlock weights for quick evaluation:
 
-- **Cityscapes (1024×512)**: [Download Link](https://your-download-url.com/cityscapes_1024x512.pth)  
-- **Cityscapes (2048×1024)**: [Download Link](https://your-download-url.com/cityscapes_2048x1024.pth)  
-- **CamVid**: [Download Link](https://your-download-url.com/camvid.pth)  
+- **Cityscapes**: [Download Link](https://pan.baidu.com/s/1Zt4bcJrIra_MvkOZqzPSZQ?pwd=apyk)  
+- **CamVid**: [Download Link](https://pan.baidu.com/s/1-_fy_nlzMtE8XyNiFK99PA?pwd=63xx)  
 - **ADE20K**: [Download Link](https://your-download-url.com/ade20k.pth)  
 
 
