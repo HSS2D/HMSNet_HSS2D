@@ -103,7 +103,7 @@ We provide pretrained HVMBlock weights for quick evaluation:
 
 - **Cityscapes**: [Download Link](https://pan.baidu.com/s/1Zt4bcJrIra_MvkOZqzPSZQ?pwd=apyk)  
 - **CamVid**: [Download Link](https://pan.baidu.com/s/1-_fy_nlzMtE8XyNiFK99PA?pwd=63xx)  
-- **ADE20K**: [Download Link](https://your-download-url.com/ade20k.pth)  
+- **ADE20K**: [Download Link](https://pan.baidu.com/s/1EV_WDmE-aCuHmuMmBhtoaw?pwd=c28h)  
 
 
 
