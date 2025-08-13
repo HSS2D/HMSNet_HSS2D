@@ -1,4 +1,5 @@
-
+#### HSS2D Architecture：
+![f7](https://github.com/user-attachments/assets/4c633e31-bdbe-41d2-b7f4-496db399895d)
 
 #### Introduction:
 
@@ -96,15 +97,16 @@ We provide an exact requirements.txt for reproducibility:
 pip install -r requirements.txt
 ```
 
+Pretrained Weights
+
+We provide pretrained HVMBlock weights for quick evaluation:
+
+- **Cityscapes (1024×512)**: [Download Link](https://your-download-url.com/cityscapes_1024x512.pth)  
+- **Cityscapes (2048×1024)**: [Download Link](https://your-download-url.com/cityscapes_2048x1024.pth)  
+- **CamVid**: [Download Link](https://your-download-url.com/camvid.pth)  
+- **ADE20K**: [Download Link](https://your-download-url.com/ade20k.pth)  
 
 
 
 
 
-#### HMSNet Architecture：
-![f4](https://github.com/user-attachments/assets/5903b8e1-e524-4225-a6d1-fcf147401138)
-<br>
-<br>
-<br>
-#### HSS2D Architecture：
-![f7](https://github.com/user-attachments/assets/4c633e31-bdbe-41d2-b7f4-496db399895d)
