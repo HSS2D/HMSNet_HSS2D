@@ -89,6 +89,18 @@ tqdm==4.66.5
 transformers==4.45.1
 ```
 
+Install dependencies
+
+We provide an exact requirements.txt for reproducibility:
+```
+pip install -r requirements.txt
+```
+
+
+
+
+
+
 #### HMSNet Architecture：
 ![f4](https://github.com/user-attachments/assets/5903b8e1-e524-4225-a6d1-fcf147401138)
 <br>
